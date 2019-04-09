@@ -1,0 +1,31 @@
+<div class="container">
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+<span class="help-block" *ngIf="!profileForm.get('firstName').valid && profileForm.get('firstName').touched">Name is false</span>
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+  <span class="help-block" *ngIf="!profileForm.get('lastName').valid && profileForm.get('lastName').touched">lastName is false</span>
+  <label>
+    Email:
+    <input type="text" formControlName="email">
+  </label>
+  <span class="help-block" *ngIf="!profileForm.get('email').valid && profileForm.get('email').touched">email is false</span><br>
+<button type="submit" [disabled]="!profileForm.valid" class="btn">Submit</button>
+</form><br>
+  <div *ngIf="users">
+<h2>Users</h2>
+<ul class="users">
+  <li *ngFor="let user of users" >
+    <a routerLink="/member/{{user.id}}">
+      <span class="badge">{{user.id}}</span> {{user.firstName}}
+    </a>
+  </li>
+</ul>
+</div>
+</div>

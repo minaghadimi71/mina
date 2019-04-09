@@ -1,0 +1,80 @@
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+.help-block{
+    color: red;
+}
+/* ProfileEditorComponent's private CSS styles */
+:host {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+}
+
+label {
+    display: block;
+    width: 6em;
+    margin: .5em 0;
+    color: #607D8B;
+    font-weight: bold;
+}
+
+input {
+    height: 2em;
+    font-size: 1em;
+    padding-left: .4em;
+}
+
+button {
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cfd8dc;
+}
+
+button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+}
+.users {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+}
+.users a {
+    position: relative;
+    cursor: pointer;
+    background-color: #EEE;
+    margin: .5em;
+    padding: 10px 0;
+    border-radius: 4px;
+    color: #888;
+    text-decoration: none;
+    display: block;
+    width: 250px;
+}
+
+.users a:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+}
+.users .badge {
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    left: 0;
+    font-size: small;
+    color: white;
+    background-color: #607D8B;
+    text-align: center;
+    border-radius: 4px 0 0 4px;
+}
